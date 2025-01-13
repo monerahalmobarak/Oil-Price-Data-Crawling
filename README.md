@@ -1,31 +1,39 @@
-# Oil Price Data Crawling and Updating Interface
+# Oil Price Data Crawling
 
-# Project Overview
+## Overview
+This project is designed to scrape and collect oil price data from online sources. The extracted data can be used for analysis, visualization, and research purposes. The project demonstrates efficient web scraping techniques and organizes the extracted data in a structured format.
 
-This project consists of two main components:
+## Features
+- **Automated Data Crawling**: Extract oil price data from reliable online sources.
+- **Data Storage**: Save the data in a structured format (CSV, database, etc.).
+- **Scalability**: Easily extendable to support additional data sources.
+- **Data Processing**: Preprocess data for further analysis and visualization.
 
-Data Crawling: A Python script (Data Crawling.py) that crawls oil price data from the website 'http://www.eia.gov'. It uses libraries like requests, BeautifulSoup4, and pandas to extract, process, and store data.
+## Requirements
+Before running the project, ensure you have the following installed:
 
-Web Interface for Data Update: An HTML template (update.html) for updating oil price records. This interface allows users to input old and new data regarding oil prices, areas, and dates.
+- Python 3.8+
+- Required Python packages (listed in `requirements.txt`)
 
-Setup and Installation
-Prerequisites
-Python 3.x
-pip (Python package manager)
-PostgreSQL database (for storing crawled data)
-Installing Required Python Libraries
-Run the following commands to install the necessary libraries:
+## Usage
 
-pip install beautifulsoup4 pandas sqlalchemy psycopg2
-Configuring the Database
-Set up a PostgreSQL database.
-Modify the db_connection_string in Data Crawling.py to match your database credentials.
-Running the Data Crawling Script
-Execute Data Crawling.py to start the data crawling process. The script will scrape the latest oil price data and store it in the configured database.
+### Running the Scraper
+To start scraping data, run the main script:
+```bash
+python main.py
+```
+## Project Structure
 
-Setting Up the Web Interface
-Place update.html in your web server's directory.
-Ensure that the server is configured to handle the form submission to /update_price.
-Usage
-Run the Python script to scrape and store data in your database.
-Use the web interface to manually update oil price records as needed.
+```
+Oil-Price-Data-Crawling/
+├── data/                # Directory for storing scraped data
+├── src/                 # Source code files
+│   ├── scraper.py       # Core scraping logic
+│   ├── utils.py         # Utility functions
+│   └── config.py        # Configuration file
+├── requirements.txt     # Python dependencies
+├── main.py              # Entry point of the project
+├── README.md            # Project documentation
+```
+
+
